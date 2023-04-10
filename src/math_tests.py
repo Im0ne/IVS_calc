@@ -1,4 +1,4 @@
-from src/math_lib import MathLib as calc
+from math_lib import MathLib as calc
 import unittest
 
 class TestMathLibrary(unittest.TestCase):
