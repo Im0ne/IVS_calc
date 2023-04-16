@@ -317,7 +317,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Calculator", None))
         MainWindow.setProperty("background", "")
-        self.lbl_temp.setText(QCoreApplication.translate("MainWindow", u"12+13", None))
+        self.lbl_temp.setText(QCoreApplication.translate("MainWindow", None))
         self.line_entry.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.button_1.setText(QCoreApplication.translate("MainWindow", u"1", None))
 #if QT_CONFIG(shortcut)
