@@ -1,15 +1,12 @@
 <RCC>
   <qresource prefix="icons">
-<<<<<<< HEAD
     <file>backspace.png</file>
     <file>calculator_icon.png</file>
     <file>math_square.png</file>
     <file>square-root.png</file>
-=======
     <file>math_square.png</file>
     <file>calculator_icon.png</file>
     <file>square-root.png</file>
     <file>backspace.png</file>
->>>>>>> c9c7eef27eab32935cdea4a12fa407107e40c912
   </qresource>
 </RCC>
