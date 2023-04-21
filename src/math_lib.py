@@ -48,8 +48,7 @@ class MathLib(object):
             else:
                 for i in range(1, a):
                     a *= i
-                return a
-            
+                return a            
     
         ## @brief Absolute value
         # @return The absolute value of a
@@ -59,4 +58,7 @@ class MathLib(object):
             else:
                 return a
     
-       
+        ## @brief Modulo
+        # @return The remainder of a divided by b
+        def mod(a, b):
+            return a % b      

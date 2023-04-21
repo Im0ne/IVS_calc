@@ -43,3 +43,8 @@ class TestMathLibrary(unittest.TestCase):
         self.assertEqual(calc.abs(1), 1)
         self.assertEqual(calc.abs(-1), 1)
         self.assertEqual(calc.abs(-235233), 235233)
+    
+    def test_modulo(self):
+        self.assertEqual(calc.mod(1, 2), 1)
+        self.assertEqual(calc.mod(2, 2), 0)
+        self.assertEqual(calc.mod(3, 2), 1)
