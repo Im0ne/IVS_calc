@@ -62,7 +62,7 @@ height: 50px;
 margin-top: 8px;</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -87,7 +87,7 @@ text-alight: right;
 </string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="maxLength">
        <number>16</number>
@@ -97,6 +97,9 @@ text-alight: right;
       </property>
       <property name="readOnly">
        <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Enter a value</string>
       </property>
      </widget>
     </item>
@@ -830,7 +833,7 @@ background-color: orange;
       <property name="styleSheet">
        <string notr="true">color: gray;
 font-size: 20px;
-text-decoration: none;
+text-decoration: bold;
 margin-top: 10px;</string>
       </property>
       <property name="text">
