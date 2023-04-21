@@ -4,7 +4,7 @@ from math_lib import MathLib
 from typing import Union
 from PySide6.QtWidgets import QApplication, QMainWindow
 
-from gui import Ui_MainWindow
+from ui import Ui_MainWindow
 
 class Calculator(QMainWindow):
     def __init__(self):
