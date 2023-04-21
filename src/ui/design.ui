@@ -14,7 +14,7 @@
    <string>Calculator</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="icons/files.qrc">
+   <iconset resource="ui/icons/files.qrc">
     <normaloff>:/icons/calculator_icon.png</normaloff>:/icons/calculator_icon.png</iconset>
   </property>
   <property name="styleSheet">
@@ -285,7 +285,7 @@ color: black;
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="icons/files.qrc">
+         <iconset resource="ui/icons/files.qrc">
           <normaloff>:/icons/backspace.png</normaloff>:/icons/backspace.png</iconset>
         </property>
         <property name="iconSize">
@@ -682,7 +682,7 @@ color: black;
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="icons/files.qrc">
+         <iconset resource="ui/icons/files.qrc">
           <normaloff>:/icons/square-root.png</normaloff>:/icons/square-root.png</iconset>
         </property>
         <property name="iconSize">
@@ -752,7 +752,7 @@ box-sizing: border-box;
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="icons/files.qrc">
+         <iconset resource="ui/icons/files.qrc">
           <normaloff>:/icons/math_square.png</normaloff>:/icons/math_square.png</iconset>
         </property>
         <property name="iconSize">
@@ -857,7 +857,7 @@ margin-top: 10px;</string>
   </widget>
  </widget>
  <resources>
-  <include location="icons/files.qrc"/>
+  <include location="ui/icons/files.qrc"/>
  </resources>
  <connections/>
 </ui>

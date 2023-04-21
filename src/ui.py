@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui/design.ui'
+# Form implementation generated from reading ui file 'design.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -16,7 +16,7 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(602, 769)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/ui/icons/calculator_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/icons/calculator_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet("QWidget {\n"
 "    color: white;\n"
@@ -190,7 +190,7 @@ class Ui_MainWindow(object):
 "}")
         self.button_backspace.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/ui/icons/backspace.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(":/icons/backspace.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.button_backspace.setIcon(icon1)
         self.button_backspace.setIconSize(QtCore.QSize(40, 40))
         self.button_backspace.setObjectName("button_backspace")
@@ -435,7 +435,7 @@ class Ui_MainWindow(object):
 "}")
         self.button_sqrt.setText("")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/ui/icons/square-root.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(":/icons/square-root.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.button_sqrt.setIcon(icon2)
         self.button_sqrt.setIconSize(QtCore.QSize(40, 40))
         self.button_sqrt.setObjectName("button_sqrt")
@@ -482,7 +482,7 @@ class Ui_MainWindow(object):
 "}")
         self.button_sqr.setText("")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/ui/icons/math_square.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(":/icons/math_square.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.button_sqr.setIcon(icon3)
         self.button_sqr.setIconSize(QtCore.QSize(76, 76))
         self.button_sqr.setObjectName("button_sqr")
@@ -582,3 +582,4 @@ class Ui_MainWindow(object):
         self.button_plus.setText(_translate("MainWindow", "+"))
         self.button_plus.setShortcut(_translate("MainWindow", "+"))
         self.label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><a href=\"https://github.com/Im0ne/IVS_calc\"><span style=\" font-size:8pt; font-weight:400; text-decoration: none; color:#939393;\">github.com/Im0ne/IVS_calc </span></a></p></body></html>"))
+import files_rc
