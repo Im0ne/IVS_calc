@@ -64,12 +64,12 @@ class Calculator(QMainWindow):
             self.ui.line_entry.setText('0')
     
     # Function for getting entry number from the entry line
-    def get_entry_number(self) -> Union[int, float]:
+    def get_second_number(self) -> Union[int, float]:
         entry_number = self.ui.line_entry.text().strip('.')
         return float(entry_number) if '.' in entry_number else int(entry_number)
     
     # Function for getting temprorary number from the temprorary line
-    def get_temprorary_number(self) -> Union[int, float, None]:
+    def get_first_number(self) -> Union[int, float, None]:
         if self.ui.lbl_temp.text():
             temprorary_number = self.ui.lbl_temp.text().split()[0].strip('.')
             return float(temprorary_number) if '.' in temprorary_number else int(temprorary_number)
@@ -101,47 +101,60 @@ class Calculator(QMainWindow):
         if self.ui.lbl_temp.text():
             math_operator = self.get_math_sign()
             if math_operator == '+':
-                result = MathLib.add(self.get_temprorary_number(), self.get_entry_number())
+                result = MathLib.add(self.get_first_number(), self.get_second_number())
             elif math_operator == '-':
-                result = MathLib.sub(self.get_temprorary_number(), self.get_entry_number())
+                result = MathLib.sub(self.get_first_number(), self.get_second_number())
             elif math_operator == 'x':
-                result = MathLib.mul(self.get_temprorary_number(), self.get_entry_number())
+                result = MathLib.mul(self.get_first_number(), self.get_second_number())
             elif math_operator == '/':
-                if(self.get_entry_number() == 0):
+                if(self.get_second_number() == 0):
                     self.ui.line_entry.setText('Error! Divide 0!')
                     self.ui.lbl_temp.clear()
                     return
                 else:
-                    result = MathLib.div(self.get_temprorary_number(), self.get_entry_number())
+                    result = MathLib.div(self.get_first_number(), self.get_second_number())
             elif math_operator == '^':
-                if(self.get_temprorary_number() == 0 and self.get_entry_number() == 0):
+                if(self.get_first_number() == 0 and self.get_second_number() == 0):
                     self.ui.line_entry.setText('Error! 0^0!')
                     self.ui.lbl_temp.clear()
                     return
                 else:
-                    result = MathLib.pow(self.get_temprorary_number(), self.get_entry_number())
+                    result = MathLib.pow(self.get_first_number(), self.get_second_number())
             elif math_operator == 'root':
-                if(self.get_temprorary_number() < 0):
+                if(self.get_first_number() < 0):
                     self.ui.line_entry.setText('Error! root(-x)!')
                     self.ui.lbl_temp.clear()
                     return
+                if(self.get_second_number() == 0):
+                    self.ui.line_entry.setText('Err! root(x,0)!')
+                    self.ui.lbl_temp.clear()
+                    return
                 else:
-                    result = MathLib.root(self.get_temprorary_number(), self.get_entry_number())
+                    result = MathLib.root(self.get_first_number(), self.get_second_number())
             elif math_operator == '!':
-                if(self.get_temprorary_number() < 0):
+                if(self.get_first_number() < 0):
                     self.ui.line_entry.setText('Error! fact(-x)!')
                     self.ui.lbl_temp.clear()
                     return
-                if(self.get_temprorary_number() != int(self.get_temprorary_number())): 
+                if(self.get_first_number() != int(self.get_first_number())): 
                     self.ui.line_entry.setText('Error! fact(x.y)!')
                     self.ui.lbl_temp.clear()
                     return
                 else:
-                    result = MathLib.fact(self.get_temprorary_number())
+                    result = MathLib.fact(self.get_first_number())
             elif math_operator == '|x|':
-                result = MathLib.abs(self.get_temprorary_number())
+                result = MathLib.abs(self.get_first_number())
             elif math_operator == '%':
-               result = MathLib.mod(self.get_temprorary_number(), self.get_entry_number())
+                if(self.get_first_number() == 0):
+                    self.ui.line_entry.setText('Error! x%0!')
+                    self.ui.lbl_temp.clear()
+                    return
+                if(self.get_second_number() == 0):
+                    self.ui.line_entry.setText('Error! 0''%''x!')
+                    self.ui.lbl_temp.clear()
+                    return
+                else:
+                    result = MathLib.mod(self.get_first_number(), self.get_second_number())
             self.ui.line_entry.setText(str(result))
             self.ui.line_entry.setText(self.remove_zeroes(self.ui.line_entry.text()))
             self.ui.lbl_temp.clear()
