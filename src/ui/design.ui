@@ -14,7 +14,11 @@
    <string>Calculator</string>
   </property>
   <property name="windowIcon">
+<<<<<<< HEAD
    <iconset resource="ui/icons/files.qrc">
+=======
+   <iconset resource="icons/files.qrc">
+>>>>>>> 3be9bf2263534bbfe84fde445dc151153e82f6c0
     <normaloff>:/icons/calculator_icon.png</normaloff>:/icons/calculator_icon.png</iconset>
   </property>
   <property name="styleSheet">
@@ -62,7 +66,11 @@ height: 50px;
 margin-top: 8px;</string>
       </property>
       <property name="text">
+<<<<<<< HEAD
        <string/>
+=======
+       <string>0</string>
+>>>>>>> 3be9bf2263534bbfe84fde445dc151153e82f6c0
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -285,7 +293,11 @@ color: black;
          <string/>
         </property>
         <property name="icon">
+<<<<<<< HEAD
          <iconset resource="ui/icons/files.qrc">
+=======
+         <iconset resource="icons/files.qrc">
+>>>>>>> 3be9bf2263534bbfe84fde445dc151153e82f6c0
           <normaloff>:/icons/backspace.png</normaloff>:/icons/backspace.png</iconset>
         </property>
         <property name="iconSize">
@@ -682,7 +694,11 @@ color: black;
          <string/>
         </property>
         <property name="icon">
+<<<<<<< HEAD
          <iconset resource="ui/icons/files.qrc">
+=======
+         <iconset resource="icons/files.qrc">
+>>>>>>> 3be9bf2263534bbfe84fde445dc151153e82f6c0
           <normaloff>:/icons/square-root.png</normaloff>:/icons/square-root.png</iconset>
         </property>
         <property name="iconSize">
@@ -752,7 +768,11 @@ box-sizing: border-box;
          <string/>
         </property>
         <property name="icon">
+<<<<<<< HEAD
          <iconset resource="ui/icons/files.qrc">
+=======
+         <iconset resource="icons/files.qrc">
+>>>>>>> 3be9bf2263534bbfe84fde445dc151153e82f6c0
           <normaloff>:/icons/math_square.png</normaloff>:/icons/math_square.png</iconset>
         </property>
         <property name="iconSize">
@@ -833,7 +853,11 @@ background-color: orange;
       <property name="styleSheet">
        <string notr="true">color: gray;
 font-size: 20px;
+<<<<<<< HEAD
 text-decoration: bold;
+=======
+text-decoration: none;
+>>>>>>> 3be9bf2263534bbfe84fde445dc151153e82f6c0
 margin-top: 10px;</string>
       </property>
       <property name="text">
@@ -857,7 +881,11 @@ margin-top: 10px;</string>
   </widget>
  </widget>
  <resources>
+<<<<<<< HEAD
   <include location="ui/icons/files.qrc"/>
+=======
+  <include location="icons/files.qrc"/>
+>>>>>>> 3be9bf2263534bbfe84fde445dc151153e82f6c0
  </resources>
  <connections/>
 </ui>
