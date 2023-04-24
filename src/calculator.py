@@ -3,6 +3,7 @@ import math_lib
 from math_lib import MathLib
 from typing import Union
 from PySide6.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtGui import QPixmap
 
 from ui import Ui_MainWindow
 
@@ -142,6 +143,7 @@ class Calculator(QMainWindow):
             elif math_operator == '%':
                result = MathLib.mod(self.get_temprorary_number(), self.get_entry_number())
             self.ui.line_entry.setText(str(result))
+            self.ui.line_entry.setText(self.remove_zeroes(self.ui.line_entry.text()))
             self.ui.lbl_temp.clear()
 
 # Main
