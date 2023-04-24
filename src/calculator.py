@@ -7,6 +7,7 @@ from PyQt5.QtGui import QPixmap
 
 from ui import Ui_MainWindow
 
+
 class Calculator(QMainWindow):
     def __init__(self):
         super(Calculator, self).__init__()
@@ -52,12 +53,16 @@ class Calculator(QMainWindow):
         else:
             self.ui.line_entry.setText(self.ui.line_entry.text() + btn_text)
 
+
     # Function for adding point to the entry line
+
     def add_point(self) -> None:
         if '.' not in self.ui.line_entry.text():
             self.ui.line_entry.setText(self.ui.line_entry.text() + '.')
         
+
     # Function for adding temprorary number and math operator    
+
     def add_temprorary(self, math_operator: str) -> None:
         if self.ui.lbl_temp.text() == '':
             self.ui.lbl_temp.setText(f'{self.remove_zeroes(self.ui.line_entry.text())} {math_operator}')
@@ -70,6 +75,7 @@ class Calculator(QMainWindow):
     
     # Function for getting temprorary number from the temprorary line
     def get_first_number(self) -> Union[int, float, None]:
+
         if self.ui.lbl_temp.text():
             temprorary_number = self.ui.lbl_temp.text().split()[0].strip('.')
             return float(temprorary_number) if '.' in temprorary_number else int(temprorary_number)
@@ -80,6 +86,7 @@ class Calculator(QMainWindow):
             return self.ui.lbl_temp.text().split()[1]
     
     # Function for clearing entry line and temprorary line
+
     def clear_all_digits(self) -> None:
         self.ui.line_entry.setText('0')
         self.ui.lbl_temp.clear()
@@ -97,6 +104,7 @@ class Calculator(QMainWindow):
             return string # If string has no point, return it as it is
     
     # Main function for math operations
+
     def calculate(self) -> Union[str, None]:
         if self.ui.lbl_temp.text():
             math_operator = self.get_math_sign()
@@ -159,7 +167,7 @@ class Calculator(QMainWindow):
             self.ui.line_entry.setText(self.remove_zeroes(self.ui.line_entry.text()))
             self.ui.lbl_temp.clear()
 
-# Main
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = Calculator()
