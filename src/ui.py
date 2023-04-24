@@ -18,7 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QGridLayout, QLabel, QLineEdit,
     QMainWindow, QPushButton, QSizePolicy, QVBoxLayout,
     QWidget)
-import files_rc
+from PySide6.QtGui import QIcon
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(602, 769)
         icon = QIcon()
-        icon.addFile(u":/icons/calculator_icon.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u"ui/icons/calculator_icon.png", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet(u"QWidget {\n"
 "	color: white;\n"
@@ -196,7 +196,7 @@ class Ui_MainWindow(object):
 "	background-color: #FBFBFB;\n"
 "}")
         icon1 = QIcon()
-        icon1.addFile(u":/icons/backspace.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u"ui/icons/backspace.png", QSize(), QIcon.Normal, QIcon.Off)
         self.button_backspace.setIcon(icon1)
         self.button_backspace.setIconSize(QSize(40, 40))
 
@@ -427,7 +427,7 @@ class Ui_MainWindow(object):
 "	background-color: #FBFBFB;\n"
 "}")
         icon2 = QIcon()
-        icon2.addFile(u":/icons/square-root.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon2.addFile(u"ui/icons/square-root.png", QSize(), QIcon.Normal, QIcon.Off)
         self.button_sqrt.setIcon(icon2)
         self.button_sqrt.setIconSize(QSize(40, 40))
 
@@ -471,7 +471,7 @@ class Ui_MainWindow(object):
 "	background-color: #FBFBFB;\n"
 "}")
         icon3 = QIcon()
-        icon3.addFile(u":/icons/math_square.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon3.addFile(u"ui/icons/math_square.png", QSize(), QIcon.Normal, QIcon.Off)
         self.button_sqr.setIcon(icon3)
         self.button_sqr.setIconSize(QSize(76, 76))
 
