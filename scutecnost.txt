@@ -1,4 +1,0 @@
-xonufr00 X (nastaveni githubu a kontrola pull requestu, mat. knihovna a testy, nastsaveni doxygenu, vytvoreni prirucky, vytvoreni planu)
-xshele02 X (vytvoreni hlavniho souboru, profiling)
-xslysa00 X (vytvoreni gui, mockupu, pomohal vsem ostatnim)
-xbalat00 X (vytvoreni instalcniho balicku, makefilu)
