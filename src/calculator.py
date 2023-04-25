@@ -27,7 +27,7 @@ class Calculator(QMainWindow):
 
         # Connect operators to functions
         self.ui.button_clear.clicked.connect(lambda: self.clear_all_digits())
-        self.ui.button_backspace.clicked.connect(lambda: self.clear_entry())
+        self.ui.button_backspace.clicked.connect(lambda: self.clear_last_digit())
         self.ui.button_point.clicked.connect(lambda: self.add_point())
 
 
@@ -90,9 +90,14 @@ class Calculator(QMainWindow):
         self.ui.line_entry.setText('0')
         self.ui.lbl_temp.clear()
 
-    # Function for clearing entry line
-    def clear_entry(self) -> None:
-        self.ui.line_entry.setText('0')
+        # Function for clearing last digit in line
+    def clear_last_digit(self) -> None:
+            line_text = self.ui.line_entry.text()
+            if line_text and line_text[-1].isdigit():
+                line_text = line_text[:-1]
+                self.ui.line_entry.setText(line_text)
+            if len(line_text) == 0:
+                self.ui.line_entry.setText('0')
 
     # Static method for math operations and removing zeroes
     @staticmethod
