@@ -96,12 +96,12 @@ class Calculator(QMainWindow):
 
     ## @brief Function for clearing entry line
     def clear_last_digit(self) -> None:
-            line_text = self.ui.line_entry.text()
-            if line_text and line_text[-1].isdigit():
-                line_text = line_text[:-1]
-                self.ui.line_entry.setText(line_text)
-            if len(line_text) == 0:
-                self.ui.line_entry.setText('0')
+        line_text = self.ui.line_entry.text()
+        if line_text or line_text[-1].isdigit():
+            line_text = line_text[:-1]
+            self.ui.line_entry.setText(line_text)
+        if len(line_text) == 0 or line_text == '-':
+            self.ui.line_entry.setText('0')
 
     ## @brief Static method for math operations and removing zeroes
     @staticmethod
