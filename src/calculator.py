@@ -171,7 +171,7 @@ class Calculator(QMainWindow):
                     return
                 else:
                     result = MathLib.mod(self.get_first_number(), self.get_second_number())
-            if(int(result) >= 9999999999999999):
+            if(int(result) > 9999999999999999):
                 self.ui.line_entry.setText('Error! 16+ digits!')
                 self.ui.lbl_temp.clear()
                 return
