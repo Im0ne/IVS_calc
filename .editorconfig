@@ -1,5 +1,3 @@
-# Editor configuration, see http://editorconfig.org
-
 # Use 4 spaces for indentation
 [*.py]
 indent_style = space
