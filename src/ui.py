@@ -470,7 +470,7 @@ class Ui_MainWindow(object):
         icon3 = QIcon()
         icon3.addFile(u"ui/icons/math_square.png", QSize(), QIcon.Normal, QIcon.Off)
         self.button_sqr.setIcon(icon3)
-        self.button_sqr.setIconSize(QSize(76, 76))
+        self.button_sqr.setIconSize(QSize(52, 52))
 
         self.buttons.addWidget(self.button_sqr, 1, 3, 1, 1)
 
