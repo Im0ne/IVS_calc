@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
+##
+# @file ui.py
+# @author xslysa00 Akim Slys
+# @brief UI for the calculator
 
-################################################################################
-## Form generated from reading UI file 'design.ui'
-##
-## Created by: Qt User Interface Compiler version 6.5.0
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
-################################################################################
 
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
@@ -539,79 +536,45 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Calculator", None))
         MainWindow.setProperty("background", "")
         self.lbl_temp.setText("")
-        self.line_entry.setText("")
+        self.line_entry.setText("0")
         self.line_entry.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Enter a value", None))
         self.button_clear.setText(QCoreApplication.translate("MainWindow", u"\u0421", None))
         self.button_1.setText(QCoreApplication.translate("MainWindow", u"1", None))
-#if QT_CONFIG(shortcut)
         self.button_1.setShortcut(QCoreApplication.translate("MainWindow", u"1", None))
-#endif // QT_CONFIG(shortcut)
         self.button_2.setText(QCoreApplication.translate("MainWindow", u"2", None))
-#if QT_CONFIG(shortcut)
         self.button_2.setShortcut(QCoreApplication.translate("MainWindow", u"2", None))
-#endif // QT_CONFIG(shortcut)
         self.button_8.setText(QCoreApplication.translate("MainWindow", u"8", None))
-#if QT_CONFIG(shortcut)
         self.button_8.setShortcut(QCoreApplication.translate("MainWindow", u"8", None))
-#endif // QT_CONFIG(shortcut)
         self.button_3.setText(QCoreApplication.translate("MainWindow", u"3", None))
-#if QT_CONFIG(shortcut)
         self.button_3.setShortcut(QCoreApplication.translate("MainWindow", u"3", None))
-#endif // QT_CONFIG(shortcut)
         self.button_backspace.setText("")
-#if QT_CONFIG(shortcut)
         self.button_backspace.setShortcut(QCoreApplication.translate("MainWindow", u"Backspace", None))
-#endif // QT_CONFIG(shortcut)
         self.button_6.setText(QCoreApplication.translate("MainWindow", u"6", None))
-#if QT_CONFIG(shortcut)
         self.button_6.setShortcut(QCoreApplication.translate("MainWindow", u"6", None))
-#endif // QT_CONFIG(shortcut)
         self.button_9.setText(QCoreApplication.translate("MainWindow", u"9", None))
-#if QT_CONFIG(shortcut)
         self.button_9.setShortcut(QCoreApplication.translate("MainWindow", u"9", None))
-#endif // QT_CONFIG(shortcut)
         self.button_5.setText(QCoreApplication.translate("MainWindow", u"5", None))
-#if QT_CONFIG(shortcut)
         self.button_5.setShortcut(QCoreApplication.translate("MainWindow", u"5", None))
-#endif // QT_CONFIG(shortcut)
         self.button_7.setText(QCoreApplication.translate("MainWindow", u"7", None))
-#if QT_CONFIG(shortcut)
         self.button_7.setShortcut(QCoreApplication.translate("MainWindow", u"7", None))
-#endif // QT_CONFIG(shortcut)
         self.button_point.setText(QCoreApplication.translate("MainWindow", u".", None))
         self.button_4.setText(QCoreApplication.translate("MainWindow", u"4", None))
-#if QT_CONFIG(shortcut)
         self.button_4.setShortcut(QCoreApplication.translate("MainWindow", u"4", None))
-#endif // QT_CONFIG(shortcut)
         self.button_0.setText(QCoreApplication.translate("MainWindow", u"0", None))
-#if QT_CONFIG(shortcut)
         self.button_0.setShortcut(QCoreApplication.translate("MainWindow", u"0", None))
-#endif // QT_CONFIG(shortcut)
         self.button_div.setText(QCoreApplication.translate("MainWindow", u"\u00f7", None))
-#if QT_CONFIG(shortcut)
         self.button_div.setShortcut(QCoreApplication.translate("MainWindow", u"/", None))
-#endif // QT_CONFIG(shortcut)
         self.button_factorial.setText(QCoreApplication.translate("MainWindow", u"x!", None))
         self.button_procent.setText(QCoreApplication.translate("MainWindow", u"%", None))
         self.button_mul.setText(QCoreApplication.translate("MainWindow", u"\u00d7", None))
-#if QT_CONFIG(shortcut)
         self.button_mul.setShortcut(QCoreApplication.translate("MainWindow", u"*", None))
-#endif // QT_CONFIG(shortcut)
         self.button_minus.setText(QCoreApplication.translate("MainWindow", u"-", None))
-#if QT_CONFIG(shortcut)
         self.button_minus.setShortcut(QCoreApplication.translate("MainWindow", u"-", None))
-#endif // QT_CONFIG(shortcut)
         self.button_sqrt.setText("")
         self.button_module.setText(QCoreApplication.translate("MainWindow", u"|x|", None))
         self.button_sqr.setText("")
         self.button_go.setText(QCoreApplication.translate("MainWindow", u"=", None))
-#if QT_CONFIG(shortcut)
         self.button_go.setShortcut(QCoreApplication.translate("MainWindow", u"Return, =", None))
-#endif // QT_CONFIG(shortcut)
         self.button_plus.setText(QCoreApplication.translate("MainWindow", u"+", None))
-#if QT_CONFIG(shortcut)
         self.button_plus.setShortcut(QCoreApplication.translate("MainWindow", u"+", None))
-#endif // QT_CONFIG(shortcut)
         self.label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><a href=\"https://github.com/Im0ne/IVS_calc\"><span style=\" font-size:8pt; font-weight:400; text-decoration: none; color:#939393;\">github.com/Im0ne/IVS_calc </span></a></p></body></html>", None))
-    # retranslateUi
-
