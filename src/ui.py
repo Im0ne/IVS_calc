@@ -426,7 +426,7 @@ class Ui_MainWindow(object):
         icon2 = QIcon()
         icon2.addFile(u"ui/icons/square-root.png", QSize(), QIcon.Normal, QIcon.Off)
         self.button_sqrt.setIcon(icon2)
-        self.button_sqrt.setIconSize(QSize(40, 40))
+        self.button_sqrt.setIconSize(QSize(36, 36))
 
         self.buttons.addWidget(self.button_sqrt, 2, 3, 1, 1)
 
@@ -470,7 +470,7 @@ class Ui_MainWindow(object):
         icon3 = QIcon()
         icon3.addFile(u"ui/icons/math_square.png", QSize(), QIcon.Normal, QIcon.Off)
         self.button_sqr.setIcon(icon3)
-        self.button_sqr.setIconSize(QSize(76, 76))
+        self.button_sqr.setIconSize(QSize(42, 42))
 
         self.buttons.addWidget(self.button_sqr, 1, 3, 1, 1)
 

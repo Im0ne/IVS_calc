@@ -1,0 +1,13 @@
+# Use 4 spaces for indentation
+[*.py]
+indent_style = space
+indent_size = 4
+
+# Trim trailing whitespace
+trim_trailing_whitespace = true
+
+# Use LF line endings
+end_of_line = lf
+
+# Set charset
+charset = utf-8

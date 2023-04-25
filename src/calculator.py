@@ -93,15 +93,16 @@ class Calculator(QMainWindow):
     def clear_all_digits(self) -> None:
         self.ui.line_entry.setText('0')
         self.ui.lbl_temp.clear()
+        self.no_error()
 
     ## @brief Function for clearing entry line
     def clear_last_digit(self) -> None:
-            line_text = self.ui.line_entry.text()
-            if line_text and line_text[-1].isdigit():
-                line_text = line_text[:-1]
-                self.ui.line_entry.setText(line_text)
-            if len(line_text) == 0:
-                self.ui.line_entry.setText('0')
+        line_text = self.ui.line_entry.text()
+        if line_text or line_text[-1].isdigit():
+            line_text = line_text[:-1]
+            self.ui.line_entry.setText(line_text)
+        if len(line_text) == 0 or line_text == '-':
+            self.ui.line_entry.setText('0')
 
     ## @brief Static method for math operations and removing zeroes
     @staticmethod
@@ -110,9 +111,37 @@ class Calculator(QMainWindow):
             return string.rstrip('0').rstrip('.') # Remove zeroes and point if they are at the end of the string
         else:
             return string # If string has no point, return it as it is
-    
-    ## @brief Main function for math operations
+        
+    # @brief Function for blocking buttons when error occurs
 
+    def error(self) -> None:
+        self.ui.lbl_temp.clear()
+        self.ui.button_minus.setEnabled(False)
+        self.ui.button_plus.setEnabled(False)
+        self.ui.button_mul.setEnabled(False)
+        self.ui.button_div.setEnabled(False)
+        self.ui.button_sqr.setEnabled(False)
+        self.ui.button_sqrt.setEnabled(False)
+        self.ui.button_factorial.setEnabled(False)
+        self.ui.button_module.setEnabled(False)
+        self.ui.button_procent.setEnabled(False)
+        self.ui.button_backspace.setEnabled(False)
+
+    # @brief Function for unblocking buttons when error not occurs
+    def no_error(self) -> None:
+        self.ui.button_minus.setEnabled(True)
+        self.ui.button_plus.setEnabled(True)
+        self.ui.button_mul.setEnabled(True)
+        self.ui.button_div.setEnabled(True)
+        self.ui.button_sqr.setEnabled(True)
+        self.ui.button_sqrt.setEnabled(True)
+        self.ui.button_factorial.setEnabled(True)
+        self.ui.button_module.setEnabled(True)
+        self.ui.button_procent.setEnabled(True)
+
+        self.ui.button_backspace.setEnabled(True)
+
+    ## @brief Main function for math operations    
     def calculate(self) -> Union[str, None]:
         if self.ui.lbl_temp.text():
             math_operator = self.get_math_sign()
@@ -125,36 +154,36 @@ class Calculator(QMainWindow):
             elif math_operator == '/':
                 if(self.get_second_number() == 0):
                     self.ui.line_entry.setText('Error! Divide 0!')
-                    self.ui.lbl_temp.clear()
+                    self.error()
                     return
                 else:
                     result = MathLib.div(self.get_first_number(), self.get_second_number())
             elif math_operator == '^':
                 if(self.get_first_number() == 0 and self.get_second_number() == 0):
                     self.ui.line_entry.setText('Error! 0^0!')
-                    self.ui.lbl_temp.clear()
+                    self.error()
                     return
                 else:
                     result = MathLib.pow(self.get_first_number(), self.get_second_number())
             elif math_operator == 'root':
                 if(self.get_first_number() < 0):
                     self.ui.line_entry.setText('Error! root(-x)!')
-                    self.ui.lbl_temp.clear()
+                    self.error()
                     return
                 if(self.get_second_number() == 0):
                     self.ui.line_entry.setText('Err! root(x,0)!')
-                    self.ui.lbl_temp.clear()
+                    self.error()
                     return
                 else:
                     result = MathLib.root(self.get_first_number(), self.get_second_number())
             elif math_operator == '!':
                 if(self.get_first_number() < 0):
                     self.ui.line_entry.setText('Error! fact(-x)!')
-                    self.ui.lbl_temp.clear()
+                    self.error()
                     return
                 if(self.get_first_number() != int(self.get_first_number())): 
                     self.ui.line_entry.setText('Error! fact(x.y)!')
-                    self.ui.lbl_temp.clear()
+                    self.error()
                     return
                 else:
                     result = MathLib.fact(self.get_first_number())
@@ -163,26 +192,25 @@ class Calculator(QMainWindow):
             elif math_operator == '%':
                 if(self.get_first_number() == 0):
                     self.ui.line_entry.setText('Error! x%0!')
-                    self.ui.lbl_temp.clear()
+                    self.error()
                     return
                 if(self.get_second_number() == 0):
                     self.ui.line_entry.setText('Error! 0''%''x!')
-                    self.ui.lbl_temp.clear()
+                    self.error()
                     return
                 else:
                     result = MathLib.mod(self.get_first_number(), self.get_second_number())
-            if(int(result) > 9999999999999999):
+                    
+            if(int(result) >= 9999999999999999):
                 self.ui.line_entry.setText('Error! 16+ digits!')
-                self.ui.lbl_temp.clear()
+                self.error()
                 return
             else:
+                self.ui.lbl_temp.clear()
                 self.ui.line_entry.setText(str(result))
                 self.ui.line_entry.setText(self.remove_zeroes(self.ui.line_entry.text()))
-                self.ui.lbl_temp.clear()
-        else:
-            self.ui.line_entry.setText('0')
-            self.ui.lbl_temp.clear()
-            return
+                return
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
