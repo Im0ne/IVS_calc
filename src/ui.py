@@ -539,7 +539,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Calculator", None))
         MainWindow.setProperty("background", "")
         self.lbl_temp.setText("")
-        self.line_entry.setText("")
+        self.line_entry.setText("0")
         self.line_entry.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Enter a value", None))
         self.button_clear.setText(QCoreApplication.translate("MainWindow", u"\u0421", None))
         self.button_1.setText(QCoreApplication.translate("MainWindow", u"1", None))

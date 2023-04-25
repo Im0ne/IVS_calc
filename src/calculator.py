@@ -4,7 +4,6 @@ from math_lib import MathLib
 from typing import Union
 from PySide6.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QPixmap
-
 from ui import Ui_MainWindow
 
 
