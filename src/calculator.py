@@ -167,10 +167,18 @@ class Calculator(QMainWindow):
                     return
                 else:
                     result = MathLib.mod(self.get_first_number(), self.get_second_number())
-            self.ui.line_entry.setText(str(result))
-            self.ui.line_entry.setText(self.remove_zeroes(self.ui.line_entry.text()))
+            if(int(result) >= 9999999999999999):
+                self.ui.line_entry.setText('Error! 16+ digits!')
+                self.ui.lbl_temp.clear()
+                return
+            else:
+                self.ui.line_entry.setText(str(result))
+                self.ui.line_entry.setText(self.remove_zeroes(self.ui.line_entry.text()))
+                self.ui.lbl_temp.clear()
+        else:
+            self.ui.line_entry.setText('0')
             self.ui.lbl_temp.clear()
-
+            return
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
