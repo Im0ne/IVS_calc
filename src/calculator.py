@@ -113,6 +113,7 @@ class Calculator(QMainWindow):
             return string # If string has no point, return it as it is
         
     # @brief Function for blocking buttons when error occurs
+
     def error(self) -> None:
         self.ui.lbl_temp.clear()
         self.ui.button_minus.setEnabled(False)
@@ -137,9 +138,10 @@ class Calculator(QMainWindow):
         self.ui.button_factorial.setEnabled(True)
         self.ui.button_module.setEnabled(True)
         self.ui.button_procent.setEnabled(True)
+
         self.ui.button_backspace.setEnabled(True)
 
-    ## @brief Main function for math operations
+    ## @brief Main function for math operations    
     def calculate(self) -> Union[str, None]:
         if self.ui.lbl_temp.text():
             math_operator = self.get_math_sign()
