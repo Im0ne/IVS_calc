@@ -574,7 +574,7 @@ class Ui_MainWindow(object):
         self.button_module.setText(QCoreApplication.translate("MainWindow", u"|x|", None))
         self.button_sqr.setText("")
         self.button_go.setText(QCoreApplication.translate("MainWindow", u"=", None))
-        self.button_go.setShortcut(QCoreApplication.translate("MainWindow", u"Return, =", None))
+        self.button_go.setShortcut(QCoreApplication.translate("MainWindow", u"Return", None))
         self.button_plus.setText(QCoreApplication.translate("MainWindow", u"+", None))
         self.button_plus.setShortcut(QCoreApplication.translate("MainWindow", u"+", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><a href=\"https://github.com/Im0ne/IVS_calc\"><span style=\" font-size:8pt; font-weight:400; text-decoration: none; color:#939393;\">github.com/Im0ne/IVS_calc </span></a></p></body></html>", None))
