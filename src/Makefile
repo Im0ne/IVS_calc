@@ -1,17 +1,38 @@
-PYTHON=python3
+PYTHON=python
 CALC=calculator.py
-INSTALL=install/IVS_calc_insraller.exe
+ARCHIVE=xonufr00_xshele02_xslysa00_xbalat00
+TESTS=math_tests.py
+DOXYFILE=Doxyfile
+PROFILE=profiling.py
 
 all: $(CALC)
 	$(PYTHON) $(CALC)
-pack: 
+
+pack:
+	mkdir ../../$(ARCHIVE)/doc
+	cp $(DOXYFILE) ../../$(ARCHIVE)/doc
+	cp -r ../install ../../$(ARCHIVE)
+	cp -r .. ../../$(ARCHIVE)/repo
+	cd ../..; zip -r $(ARCHIVE).zip $(ARCHIVE)
+	rm -r ../../$(ARCHIVE)
 
 clean:
+	rm -r ../.idea
+	rm -r html
+	rm -r latex
+	rm -r __pycache__
+	rm -r build
+	rm -r dist
+	rm IVS_calc.spec
 
-test: 
+test: $(TESTS)
+	$(PYTHON) -m unittest $(TESTS)
 
-doc: 
+doc: $(DOXYFILE)
+	doxygen
 
 run: $(CALC)
 	$(PYTHON) $(CALC)
-profile:
+
+profile: $(PROFILE)
+	$(PYTHON) $(PROFILE)
