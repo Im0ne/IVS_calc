@@ -1,6 +1,6 @@
 ## @file math_lib.py
 # @brief Math library for the project
-# 
+# @author xonufr00 Ivan Onufriienko
 # 
 
 ## @class MathLib
